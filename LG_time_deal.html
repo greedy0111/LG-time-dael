@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, target-densitydpi=medium-dpi" />
+    <meta name="format-detection" content="telephone=no" />
+    <title></title>
+    <base href="https://www.lge.co.kr/benefits">
+    <link rel="stylesheet" type="text/css" href="/lgekor/asset/app/css/jquery/jquery-ui.min.css" />
+    <link rel="stylesheet" type="text/css" href="/lgekor/asset/app/css/lib/selectordie.css" />
+    <link rel="stylesheet" type="text/css" href="/lgekor/asset/app/css/lib/selectordie_theme_02.css" />
+    <link rel="stylesheet" type="text/css" href="/lgekor/asset/app/css/lib/swiper.min.css" />
+    <link rel="stylesheet" type="text/css" href="/lgekor/asset/app/css/default.css" /> <!-- css 리셋 및 기본정의 -->
+    <link rel="stylesheet" type="text/css" href="/lgekor/asset/app/css/common.css" /> <!-- css 레이아웃 및 공통정의 -->
+    <link rel="stylesheet" type="text/css" href="/lgekor/asset/app/css/event.css" /> <!-- css 대메뉴별 컨텐츠 정의 (membership : 멤버십 / event : 혜택,이벤트 / rental : 렌탈, 케어 / main : 메인) -->
+    <script type="text/javascript" src="/lgekor/asset/app/js/jquery/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="/lgekor/asset/app/js/jquery/jquery-ui.min.js"></script>
+</head>
+
+<body>
+    <!-- id값은 각 페이지별 화면아이디를 사용합니다. -->
+    <section id="LGEA-F-020" class="defaultWrap">
+        <header class="defualtHeader">
+            <a href="#none" class="prevPageIconBtn"><span class="blind">이전페이지 이동</span></a>
+            <h1 class="contentsTit">특별한 혜택</h1>
+            <a href="javascript:goPush();" class="alarmIconBtn"><span>알림</span></a>
+            <section class="membershipInfoWrap">
+                <h2 class="membershipIconTit"><button type="button">나의 멤버십 보기</button></h2>
+                <div class="container">
+                    <!-- //로그인 상태일 때 -->
+                    <article class="typeLogin" style="display:none;">
+                        <strong class="membershipPointTxt"><em class="nameTxt">홍길동</em>님의 보유포인트</strong>
+                        <a href="#none" class="membershipPointBtn">128,000</a>
+                        <a href="#none" class="barcodeMembership">
+                            <input type="hidden" class="barcodeValue" value="3345466756876" />
+                            <div class="barcodeArea"></div>
+                        </a>
+                    </article>
+                    <!-- 로그인 상태일 때// -->
+
+                    <!-- //로그아웃 상태일 때 -->
+                    <div class="typeLogout">
+                        <p class="LogoutIconTxt">멤버십 로그인이 필요합니다.</p>
+                        <div class="columnsbtnArea">
+                            <a href="#none" class="defaultFormBtn">멤버십 가입</a>
+                            <a href="#none" class="defaultSubFormBtn">로그인</a>
+                        </div>
+                    </div>
+                    <!-- 로그아웃 상태일 때// -->
+                </div>
+            </section>
+
+            <section class="globalMenuWrap">
+                <h2 class="globalMenuIconTit"><button type="button">전체메뉴</button></h2>
+                <div class="container">
+                    <button type="button" class="menuCloseIconBtn"></button>
+                    <div class="utillArea">
+                        <a href="#none" class="homeIconBtn"></a>
+                        <a href="#none" class="alarmIconBtn"></a>
+                        <a href="#none" class="secttingIconBtn"></a>
+                    </div>
+
+                    <div class="scrollAuto-y">
+                        <nav class="globalMenuList">
+                            <ul class="gnbList">
+                                <li>
+                                    <button type="button" class="gnbListBtn">멤버십</button>
+                                    <ul class="snbList">
+                                        <li><a href="#none" class="snbListBtn">멤버십 소개</a></li>
+                                        <li><a href="#none" class="snbListBtn">멤버십 가입</a></li>
+                                        <li><a href="#none" class="snbListBtn">나의 멤버십</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <button type="button" class="gnbListBtn">고객혜택</button>
+                                    <ul class="snbList">
+                                        <li><a href="#none" class="snbListBtn">특별한 혜택</a></li>
+                                        <li><a href="#none" class="snbListBtn">제품별 이벤트</a></li>
+                                        <li><a href="#none" class="snbListBtn">당첨자 발표</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <button type="button" class="gnbListBtn">렌탈&케어</button>
+                                    <ul class="snbList">
+                                        <li><a href="#none" class="snbListBtn">렌탈상품</a></li>
+                                        <li><a href="#none" class="snbListBtn">케어서비스</a></li>
+                                        <li><a href="#none" class="snbListBtn">나의 렌탈·케어</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#none" class="gnbListBtn">매장안내</a></li>
+                                <li><a href="#none" class="gnbListBtn">공지사항</a></li>
+                            </ul>
+                        </nav>
+
+                        <div class="shortcutArea">
+                            <strong class="shortcutTit">서비스 바로가기</strong>
+                            <div class="container">
+                                <a href="#none" class="shortcutBtn">LG전자</a>
+                                <a href="#none" class="shortcutBtn">고객서비스</a>
+                                <a href="#none" class="shortcutBtn">베스트샵</a>
+                                <a href="#none" class="shortcutBtn">렌탈&케어</a>
+                                <a href="#none" class="shortcutBtn">온라인샵</a>
+                                <a href="#none" class="shortcutBtn">B2B</a>
+                                <a href="#none" class="shortcutBtn">LG ThinkQ</a>
+                                <a href="#none" class="shortcutBtn">회사소개</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </header>
+
+        <!-- 2024-03-21 -->
+        <article class="defaultContents">
+            <article class="defaultBoardView">
+                <header class="defaultBoardHeader">
+                    <h2 class="defaultBoardTit">&lsqb;제품&rsqb; 48시간동안 톤프리 타임딜</h2>
+                    <span class="dateTxt" id="eventDate"><span class="subTit">응모 기간<span class="landmark" aria-hidden="true">|</span></span>2022-03-24 ~ 2022-03-28</span>
+                    <button type="button" class="btnShare" onclick="javascript:goEventShareUrl();"><span>공유</span></button>
+                </header>
+
+                <style>
+                    #LGEA-F-020 .linkBtn .btn_go_giftcard {
+                        height: 8vw;
+                        width: 24vw;
+                        right: 11vw;
+                        top: 56.55vw;
+                        left: auto;
+                    }
+
+                    #LGEA-F-020 .linkBtn .btn_go_giftcard:nth-child(2) {
+                        top: 105.55vw;
+                    }
+
+                    #LGEA-F-020 .linkBtn .btn_go_giftcard:nth-child(3) {
+                        top: 154.55vw;
+                    }
+
+                    #LGEA-F-020 .linkBtn .btn_go_giftcard:nth-child(4) {
+                        top: 203.55vw;
+                    }
+
+                    #LGEA-F-020 .linkBtn .btn_go_giftcard:nth-child(5) {
+                        top: 252.55vw;
+                    }
+
+                    #LGEA-F-020 .linkImages .btn_go_giftcard {
+                        height: 42.45vw;
+                        width: 44vw;
+                        top: 23.22vw;
+                        left: 28.01vw;
+                    }
+
+                    #LGEA-F-020 .linkImages .btn_go_giftcard:nth-child(2) {
+                        top: 72.55vw;
+                    }
+
+                    #LGEA-F-020 .linkImages .btn_go_giftcard:nth-child(3) {
+                        top: 121.88vw;
+                    }
+
+                    #LGEA-F-020 .linkImages .btn_go_giftcard:nth-child(4) {
+                        top: 171.21vw;
+                    }
+
+                    #LGEA-F-020 .linkImages .btn_go_giftcard:nth-child(5) {
+                        top: 220.54vw;
+                    }
+                </style>
+
+                <div class="defaultBoardContents">
+                    <div class="eventThumbnailView">
+                        <article class="boradDetail" style="padding: 0 5.55vw;border:none;font-size:0;">
+                            <div class="imgArea fullSize evtTimer">
+                                <img src="/lgekor/asset/app/images/contents/event/2022/03/img_event_48toneFree_01.jpg" alt="남은시간" />
+
+                                <strong class="timerHour">00</strong><span class="blind">시간</span>
+                                <strong class="timerMinute">00</strong><span class="blind">분</span>
+                                <strong class="timerSecond">00</strong><span class="blind">초</span>
+                            </div>
+
+                            <div class="imgArea fullSize">
+                                <img src="/lgekor/asset/app/images/contents/event/2022/03/img_event_48toneFree_02.jpg" alt="하단참조" />
+                                <div class="blind">
+                                    <span>LG전자 BEST SHOP</span>
+                                    <p>음악, 게임, 운동, 줌수업 등 톤프리가 필요한 나를 위한</p>
+                                    <strong>톤프리 타임딜</strong>
+                                    <p>코로나로 줌수업이 많아진 요즘, 공부에 지친 학생들을 위하여!</p>
+                                    <p>홍삼 및 집중력 향상을 위한 아로마 테라피 등 열공에 필요한 제품도 특가로 구매해 보세요!</p>
+                                    <ol>
+                                        <strong>이벤트 참여하고 특별혜택 받기!</strong>
+                                        <li>1. 이벤트를 통해 할인 쿠폰 신청하기</li>
+                                        <li>2. 문자로 쿠폰 받기
+                                            <ul>
+                                                <li>- 19:00 이전에 신청하신 경우 쿠폰은 최대 1시간 이내에 쿠폰 문자 발송</li>
+                                                <li>- 19:00 이후에 신청하신 경우 쿠폰은 익일 오전 중 쿠폰 문자 발송</li>
+                                            </ul>
+                                        </li>
+                                        <li>3. 가까운 LG전자 BEST SHOP 방문 후 LG전자 행사모델 구입</li>
+                                    </ol>
+                                </div>
+                            </div>
+
+                            <div class="imgArea fullSize giftCardImg">
+                                <img src="/lgekor/asset/app/images/contents/event/2022/03/img_event_48toneFree_03.jpg" alt="하단참조" />
+                                <div class="blind">
+                                    <strong>쿠폰 사용기간</strong>
+                                    <p>2022.03.24 ~ 2022.03.28</p>
+                                    <p>※ 3월 28일까지 미사용 쿠폰 자동 소멸</p>
+                                </div>
+                            </div>
+
+                            <div class="imgArea fullSize giftCardImg" style="margin: -0.7px -5.55vw; z-index: 1;">
+                                <img src="/lgekor/asset/app/images/contents/event/2022/03/img_event_48toneFree_04.jpg" alt="※ 본 이벤트는 마케팅 수신동의 고객에 한하여 참여 가능합니다. 마케팅활용동의(문자필수) 체크 후 이벤트에 참여해주세요." />
+
+                                <a href="#" class="btn_go_giftcard" onclick="javascript:unifyIdCk();" style="width: 47.91vw;height:5.83vw;bottom: 5.55vw;"><span class="blind">마케팅 활용동의 변경하러 가기</span></a>
+                            </div>
+
+                            <div class="imgArea fullSize giftCardImg">
+                                <a href="#none" class="btn_go_giftcard" style="width: 88.88vw;bottom:auto;top:4.23vw;"><img src="/lgekor/asset/app/images/contents/event/2022/03/img_event_48toneFree_05.png" alt="할인쿠폰 신청 하기" /></a>
+
+                                <!-- <span class="btn_go_giftcard" style="width: 88.88vw;bottom:auto;top:4.23vw;"><img src="/lgekor/asset/app/images/contents/event/2022/03/img_event_48toneFree_06.png" alt="타임딜 종료" /></span> -->
+
+                                <img src="/lgekor/asset/app/images/contents/event/2022/03/img_event_48toneFree_07.jpg" alt="하단참조" />
+                                <div class="blind">
+                                    <ul>
+                                        <li>
+                                            <p>TONE-TFP9E</p>
+                                            <p>30,000원 할인</p>
+                                        </li>
+                                        <li>
+                                            <p>TONE-TFP8E</p>
+                                            <p>20,000원 할인</p>
+                                        </li>
+                                    </ul>
+                                    <p>※ 자세한 제품 모델은 아래 이미지를 확인해주세요.</p>
+                                </div>
+                            </div>
+
+                            <div class="imgArea fullSize giftCardImg">
+                                <img src="/lgekor/asset/app/images/contents/event/2022/03/img_event_48toneFree_08.jpg" alt="하단참조" />
+                                <div class="blind">
+                                    <h3>LG TONE FREE</h3>
+                                    <P>원음의 감동 그대로 느끼다</P>
+                                    <p>메리디안 사운드 및 강력해진 노이즈 캔슬링 / 플렉스 베이스 느껴보세요!</p>
+                                    <p>TONE-TFP9E, TONE-TFP8E</p>
+                                </div>
+                            </div>
+
+                            <div class="imgArea fullSize giftCardImg">
+                                <img src="/lgekor/asset/app/images/contents/event/2022/03/img_event_48toneFree_09.jpg" alt="하단참조" />
+                                <div class="linkBtn">
+                                    <a href="javascript:goUrlOnNewBrowser('http://www.martsmart.shop/shop_view/?idx=1050');" class="btn_go_giftcard" title="새창">
+                                        <span class="blind">프랑리빙 구매하러 가기</span>
+                                    </a>
+
+                                    <a href="javascript:goUrlOnNewBrowser('http://www.martsmart.shop/shop_view/?idx=1051');" class="btn_go_giftcard" title="새창">
+                                        <span class="blind">정관장 구매하러 가기</span>
+                                    </a>
+
+                                    <a href="javascript:goUrlOnNewBrowser('http://www.martsmart.shop/shop_view/?idx=1052');" class="btn_go_giftcard" title="새창">
+                                        <span class="blind">시디즈 구매하러 가기</span>
+                                    </a>
+
+                                    <a href="javascript:goUrlOnNewBrowser('http://www.martsmart.shop/shop_view/?idx=1053');" class="btn_go_giftcard" title="새창">
+                                        <span class="blind">시디즈 구매하러 가기</span>
+                                    </a>
+
+                                    <a href="javascript:goUrlOnNewBrowser('http://www.martsmart.shop/shop_view/?idx=1054');" class="btn_go_giftcard" title="새창">
+                                        <span class="blind">플러스마이너스제로 구매하러 가기</span>
+                                    </a>
+                                </div>
+
+                                <div class="linkImages">
+                                    <a href="javascript:goUrlOnNewBrowser('http://www.martsmart.shop/shop_view/?idx=1050');" class="btn_go_giftcard" title="새창">
+                                        <span class="blind">프랑리빙 구매하러 가기 이미지링크</span>
+                                    </a>
+
+                                    <a href="javascript:goUrlOnNewBrowser('http://www.martsmart.shop/shop_view/?idx=1051');" class="btn_go_giftcard" title="새창">
+                                        <span class="blind">정관장 구매하러 가기 이미지링크</span>
+                                    </a>
+
+                                    <a href="javascript:goUrlOnNewBrowser('http://www.martsmart.shop/shop_view/?idx=1052');" class="btn_go_giftcard" title="새창">
+                                        <span class="blind">시디즈 구매하러 가기 이미지링크</span>
+                                    </a>
+
+                                    <a href="javascript:goUrlOnNewBrowser('http://www.martsmart.shop/shop_view/?idx=1053');" class="btn_go_giftcard" title="새창">
+                                        <span class="blind">시디즈 구매하러 가기 이미지링크</span>
+                                    </a>
+
+                                    <a href="javascript:goUrlOnNewBrowser('http://www.martsmart.shop/shop_view/?idx=1054');" class="btn_go_giftcard" title="새창">
+                                        <span class="blind">플러스마이너스제로 구매하러 가기 이미지링크</span>
+                                    </a>
+                                </div>
+
+                                <div class="blind">
+                                    <strong>수험 용품 핫딜 제품</strong>
+                                    <dl>
+                                        <dt>01. 프랑리빙</dt>
+                                        <dd>집중력향상 천연아로마테라피 스프레이+디퓨저 선물세트</dd>
+                                        <dd>최저가 : 63,000원</dd>
+                                        <dd>22% 할인 적용가 : 49,000원</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>02. 정관장</dt>
+                                        <dd>홍삼정 에브리타임 밸런스핏 (10ml*30포)</dd>
+                                        <dd>최저가 : 90,000원</dd>
+                                        <dd>28% 할인 적용가 : 65,000원</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>03. 시디즈</dt>
+                                        <dd>IBLE(아이블) 화이트쉘 메쉬의자[TNB501FE] (서울대의자)</dd>
+                                        <dd>최저가 : 221,000원</dd>
+                                        <dd>33% 할인 적용가 : 149,000원</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>04. 시디즈</dt>
+                                        <dd>악세서리 2단 발받침 기본형 네이키드 [SB01F]</dd>
+                                        <dd>최저가 : 60,000원</dd>
+                                        <dd>21% 할인 적용가 : 47,500원</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>05. 플러스마이너스제로</dt>
+                                        <dd>LED 스탠드 라이트 XLS-F010</dd>
+                                        <dd>최저가 : 69,000원</dd>
+                                        <dd>9% 할인 적용가 : 63,000원</dd>
+                                    </dl>
+                                </div>
+                            </div>
+
+                            <div class="imgArea fullSize">
+                                <img src="/lgekor/asset/app/images/contents/event/2022/03/img_event_48toneFree_10.jpg" alt="하단참조" />
+                                <div class="blind">
+                                    <strong>유의사항</strong>
+                                    <ul>
+                                        <li>마케팅활용동의를 하지 않은 경우 응모하실 수 없습니다.</li>
+                                        <li>이벤트를 통해 할인 쿠폰을 신청하시면, 쿠폰을 수신한 즉시 할인쿠폰을 매장에서 사용하실 수 있습니다.</li>
+                                        <li>할인쿠폰은 전국 LG전자 BEST SHOP에서 행사 모델 구매 시 사용 가능합니다.</li>
+                                        <li>이벤트 신청은 고객 본인만 사용이 가능합니다.</li>
+                                        <li>유효기간 내 1회 사용이 가능하며 유효기간 연장은 불가합니다.</li>
+                                        <li>금액을 나누어 사용하실 수 없고, 잔액 반환은 불가합니다.</li>
+                                        <li>본 쿠폰은 현금으로의 환급이 불가합니다.</li>
+                                        <li>본 쿠폰은 다른 쿠폰과의 중복 적용이 불가합니다.</li>
+                                        <li>당사 사정에 따라 이벤트 일정 및 내용이 고지 없이 변경될 수 있습니다.</li>
+                                        <li>수험 용품 관련 문의 / 마트스마트 고객센터 : 1644-8607 (운영시간 10:00 - 17:00, 점심시간 : 12:30 - 13:30)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </article>
+            <!-- // 2024-03-21 -->
+
+            <footer class="defaultBoardFooter">
+                <ul class="defaultList">
+                    <li><a href="#none" class="prevLinkBtn">이전 글이 없습니다.</a></li>
+                    <li><a href="#none" class="nextLinkBtn">&lsqb;CULTURE&rsqb; 삼총사 &ndash; 25커플 추첨</a></li>
+                </ul>
+            </footer>
+        </article>
+
+        <div class="defaultbtnArea">
+            <a href="#none" class="defaultFormBtn">목록</a>
+        </div>
+
+        <!-- 2024-04-15 -->
+        <footer class="defaultFooter">
+            <div class="scrollTopArea">
+                <a href="#none" class="btnTop">TOP</a>
+            </div>
+
+            <a href="javascript:;" class="fLogo">LG전자 <em></em></a>
+            <div class="footerAddress">
+                <div class="addressWrap">
+                    <dl>
+                        <dt>대표이사 : </dt>
+                        <dd>권봉석, 배두용</dd>
+                        <dt>사업자등록번호 : </dt>
+                        <dd>107-86-14075</dd>
+                    </dl>
+                    <dl>
+                        <dt>통신판매업신고번호 : </dt>
+                        <dd>제1997-00084호</dd>
+                    </dl>
+                    <dl>
+                        <dt>대표번호 : </dt>
+                        <dd>02-3777-1114</dd>
+                    </dl>
+                    <dl>
+                        <dt>주소 : </dt>
+                        <dd>서울시 영등포구 여의대로 128 LG트윈타워</dd>
+                    </dl>
+                    <dl>
+                        <dt>제품 및 서비스 문의 : </dt>
+                        <dd class="defaultColor"><a href="javascript:callPhone('1544-7777');">1544-7777</a></dd>
+                    </dl>
+                </div>
+
+                <p class="guideTxt">본 사이트의 모든 컨텐츠는 저작권법의 보호를 받는 바, <br>무단전재, 복사, 배포 등을 금합니다.</p>
+                <span class="copyRight">Copyright &copy; 2024 LG Electronics. All Rights Reserved.</span>
+            </div>
+
+            <ul class="footerUtill">
+                <li><a href="#">LG전자 개인정보처리방침</a></li>
+                <li><a href="#">LG전자 위치정보서비스 이용약관</a></li>
+                <li><a href="#">멤버십 개인정보처리방침</a></li>
+                <!-- <li><a href="#">멤버십 위치정보서비스 이용약관</a></li> -->
+                <li><a href="#">멤버십 위치정보서비스 이용약관</a></li>
+                <li><a href="#">LG전자 서비스 이용약관</a></li>
+                <li><a href="#">멤버십 서비스 이용약관</a></li>
+                <li><a href="#">앱 접근권한 안내</a></li>
+            </ul>
+        </footer>
+        <!-- // 2024-04-15 -->
+    </section>
+
+    <!-- 2024-05-11 alert popup 추가 -->
+    <section class="defaultAlertPopWrap">
+        <div class="container">
+            <header class="defaultAlertPopHeader">
+                <a href="#none" class="popCloseIconBtn"><span class="blind">닫기</span></a>
+            </header>
+
+            <article class="defaultAlertPopContents">
+                <div class="alertInfoWrap">
+                    <p class="desc">멤버십 회원만 응모 가능합니다.</p>
+                </div>
+            </article>
+
+            <div class="defaultAlertFooter">
+                <a href="#none" class="defaultFormBtn">멤버십 가입</a>
+                <a href="#none" class="defaultSubFormBtn">로그인</a>
+            </div>
+        </div>
+    </section>
+    <!-- //2024-05-11 alert popup 추가 -->
+
+    <!-- ui 스크립트 -->
+    <script type="text/javascript" src="/lgekor/asset/app/js/lib/jquery-barcode.min.js"></script>
+    <script type="text/javascript" src="/lgekor/asset/app/js/lib/swiper.min.js"></script>
+    <script type="text/javascript" src="/lgekor/asset/app/js/lib/selectordie.min.js"></script>
+    <script type="text/javascript" src="/lgekor/asset/app/js/common/ui.js"></script>
+
+    <!-- 2024-08-23 -->
+    <script>
+        $(function() {
+            var startTime = new Date(2025, 9, 22, 09, 00, 00).getTime(), // 이벤트 시작 시간 (2024,9,2,10,00,00)
+                endTime = new Date(2025, 9, 23, 23, 59, 59).getTime(), // 이벤트 종료 시간 (2024,8,23,10,00,00)
+                today = getCurrentDate().getTime(),
+                tsecond = 1000,
+                tminute = tsecond * 60,
+                thour = tminute * 60,
+                timer;
+            if (today < startTime) {
+                $('.evtTimer strong').text('00');
+            } else {
+                timer = setInterval(setTimer, 1000);
+            }
+
+            function setTimer() {
+                var now = getCurrentDate().getTime(),
+                    distance = endTime - now;
+                var hours = Math.floor(distance / thour),
+                    minutes = Math.floor((distance % thour) / tminute),
+                    secondes = Math.floor((distance % tminute) / tsecond);
+                // 시간이 10미만일 경우 2자리로 변경
+                hours = hours < 10 ? '0' + hours : hours;
+                minutes = minutes < 10 ? '0' + minutes : minutes;
+                secondes = secondes < 10 ? '0' + secondes : secondes;
+                $('.evtTimer .timerHour').text(hours);
+                $('.evtTimer .timerMinute').text(minutes);
+                $('.evtTimer .timerSecond').text(secondes);
+                if (distance < 0) {
+                    clearInterval(timer);
+                    $('.evtTimer strong').text('00');
+                }
+            }
+            // 현재 날짜 가져오기
+            function getCurrentDate() {
+                var date = new Date(),
+                    y = date.getFullYear(),
+                    m = date.getMonth(),
+                    d = date.getDate(),
+                    h = date.getHours(),
+                    min = date.getMinutes(),
+                    s = date.getSeconds();
+                return new Date(y, m, d, h, min, s);
+            }
+        });
+    </script>
+    <!-- // 2024-08-23 -->
+</body>
+
+</html>
